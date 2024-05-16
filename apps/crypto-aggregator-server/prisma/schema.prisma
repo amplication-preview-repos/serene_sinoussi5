@@ -1,0 +1,35 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model JupiterPrice {
+  asset     String?
+  createdAt DateTime  @default(now())
+  id        String    @id @default(cuid())
+  price     Float?
+  timestamp DateTime?
+  updatedAt DateTime  @updatedAt
+}
+
+model RaydiumPrice {
+  asset     String?
+  createdAt DateTime  @default(now())
+  id        String    @id @default(cuid())
+  price     Float?
+  timestamp DateTime?
+  updatedAt DateTime  @updatedAt
+}
+
+model OrcaPrice {
+  asset     String?
+  createdAt DateTime  @default(now())
+  id        String    @id @default(cuid())
+  price     Float?
+  timestamp DateTime?
+  updatedAt DateTime  @updatedAt
+}
